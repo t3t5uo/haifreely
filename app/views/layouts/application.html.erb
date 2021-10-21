@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Haifreely</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+
+
+  <body>
+
+
+    <%= render 'layouts/navbar' %>
+
+
+
+
+
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+
+          <%= render 'layouts/notices' %>
+
+          <%= yield %>
+    	   </div>
+	      </div>
+    </div>
+
+    <!--
+    <br>
+    <%= link_to "Logout",  destroy_profile_session_path, :method => :delete%><br>
+    <% if profile_signed_in? %>
+    <%= link_to "Login settings", edit_profile_registration_path%><br>
+    <%= link_to "Edit Profile", edit_profile_path(current_profile) %><br>
+    <%= link_to "My Profile", current_profile %><br>
+    <%else%>
+    <%= link_to "Sign Up", new_profile_registration_path%><br>
+    <%= link_to "Sign In", new_profile_session_path%><br>
+    <%end%>
+    <%= link_to "Home", '/' %>
+    -->
+
+  </body>
+</html>
